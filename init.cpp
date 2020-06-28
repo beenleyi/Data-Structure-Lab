@@ -7,7 +7,7 @@ using namespace std;
 extern city cities[20];
 
 void read_vehicle(ifstream & in_data,int n){
-	string c;
+	string c;  
 	int i;
 	vehicle temp;
 	while (in_data>>c){
@@ -43,7 +43,6 @@ void read_vehicle(ifstream & in_data,int n){
 		printf("%d-%d-%d ", temp.end_time.year, temp.end_time.month, temp.end_time.day);
 		printf("%d:00:00\n",temp.end_time.hour);
 	}
-	in_data.close();
 }
 
 int init(){
@@ -56,112 +55,17 @@ int init(){
 		n++;
 	}
 	city_data.close();
-	vehicle temp;
 	ifstream plane_data;
 	plane_data.open("plane.data");
-	while (plane_data>>c){
-		for (i = 0; i < n; i++){
-			if (cities[i].city_name == c) break;
-		}
-		if (i == n) {
-			printf("There is a wrong city_name in the vehicle data\n");
-			continue;
-		}
-		temp.type = 1;
-		plane_data.ignore(1); 
-		plane_data >> temp.dst_city;
-		plane_data.ignore(1); 
-		plane_data >> temp.start_time.year;
-		plane_data.ignore(1); 
-		plane_data >> temp.start_time.month;
-		plane_data.ignore(1); 
-		plane_data >> temp.start_time.day;
-		plane_data >> temp.start_time.hour;
-		plane_data.ignore(6);
-		plane_data >> temp.end_time.year;
-		plane_data.ignore(1); 
-		plane_data >> temp.end_time.month;
-		plane_data.ignore(1); 
-		plane_data >> temp.end_time.day;
-		plane_data >> temp.end_time.hour;
-		plane_data.ignore(6);		
-		cities[i].my_vehicle.push_back(temp);
-		cout<<cities[i].city_name<<temp.dst_city;
-		printf("%d-%d-%d ", temp.start_time.year, temp.start_time.month, temp.start_time.day);
-		printf("%d:00:00\n", temp.start_time.hour);
-		printf("%d-%d-%d ", temp.end_time.year, temp.end_time.month, temp.end_time.day);
-		printf("%d:00:00\n",temp.end_time.hour);
-	}
-	plane_data.close();	
+	read_vehicle(plane_data, n);
+	plane_data.close();
 	ifstream train_data;
-	train_data.open("train_data");
-	while (train_data>>c){
-		for (i = 0; i < n; i++){
-			if (cities[i].city_name == c) break;
-		}
-		if (i == n) {
-			printf("There is a wrong city_name in the vehicle data\n");
-			continue;
-		}
-		temp.type = 1;
-		train_data.ignore(1); 
-		train_data >> temp.dst_city;
-		train_data.ignore(1); 
-		train_data >> temp.start_time.year;
-		train_data.ignore(1); 
-		train_data >> temp.start_time.month;
-		train_data.ignore(1); 
-		train_data >> temp.start_time.day;
-		train_data >> temp.start_time.hour;
-		train_data.ignore(6);
-		train_data >> temp.end_time.year;
-		train_data.ignore(1); 
-		train_data >> temp.end_time.month;
-		train_data.ignore(1); 
-		train_data >> temp.end_time.day;
-		train_data >> temp.end_time.hour;
-		train_data.ignore(6);		
-		cities[i].my_vehicle.push_back(temp);
-		cout<<cities[i].city_name<<temp.dst_city;
-		printf("%d-%d-%d ", temp.start_time.year, temp.start_time.month, temp.start_time.day);
-		printf("%d:00:00\n", temp.start_time.hour);
-		printf("%d-%d-%d ", temp.end_time.year, temp.end_time.month, temp.end_time.day);
-		printf("%d:00:00\n",temp.end_time.hour);
-	}
+	train_data.open("train.data");
+	read_vehicle(train_data, n);
+	train_data.close();
 	ifstream car_data;
-	car_data.open("car_data");
-	while (car_data>>c){
-		for (i = 0; i < n; i++){
-			if (cities[i].city_name == c) break;
-		}
-		if (i == n) {
-			printf("There is a wrong city_name in the vehicle data\n");
-			continue;
-		}
-		temp.type = 1;
-		car_data.ignore(1); 
-		car_data >> temp.dst_city;
-		car_data.ignore(1); 
-		car_data >> temp.start_time.year;
-		car_data.ignore(1); 
-		car_data >> temp.start_time.month;
-		car_data.ignore(1); 
-		car_data >> temp.start_time.day;
-		car_data >> temp.start_time.hour;
-		car_data.ignore(6);
-		car_data >> temp.end_time.year;
-		car_data.ignore(1); 
-		car_data >> temp.end_time.month;
-		car_data.ignore(1); 
-		car_data >> temp.end_time.day;
-		car_data >> temp.end_time.hour;
-		car_data.ignore(6);		
-		cities[i].my_vehicle.push_back(temp);
-		cout<<cities[i].city_name<<temp.dst_city;
-		printf("%d-%d-%d ", temp.start_time.year, temp.start_time.month, temp.start_time.day);
-		printf("%d:00:00\n", temp.start_time.hour);
-		printf("%d-%d-%d ", temp.end_time.year, temp.end_time.month, temp.end_time.day);
-		printf("%d:00:00\n",temp.end_time.hour);
-	}
+	car_data.open("car.data");
+	read_vehicle(car_data, n);	
+	car_data.close();
 	return n;
 }
