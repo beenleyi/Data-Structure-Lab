@@ -1,22 +1,30 @@
-Beijing - Guangzhou 2020-07-01 10:00:00 2020-07-02 12:00:00
-Tianjin - Haerbin 2020-07-01 09:00:00 2020-07-01 17:00:00
-Shanghai - Beijing  2020-07-01 19:00:00 2020-07-02 7:00:00
-Guangzhou - Xian 2020-07-01 12:00:00 2020-07-01 23:00:00
-Changsha - Nanjing 2020-07-01 22:00:00 2020-07-02 12:00:00
-Nanjing - Chengdu 2020-07-02 09:00:00 2020-07-01 11:00:00
-Beijing - Xian 2020-07-01 12:00:00 2020-07-02 22:00:00
-Changsha - Wuhan 2020-07-01 09:00:00 2020-07-02 17:00:00
-Guangzhou - Nanjing 2020-07-01 19:00:00 2020-07-01 23:00:00
-Haerbin - Guangzhou 2020-07-01 22:00:00 2020-07-02 20:00:00
-Chengdu - Beijing 2020-07-01 12:00:00 2020-07-02 22:00:00
-Guangzhou - Beijing 2020-07-01 10:00:00 2020-07-02 12:00:00
-Haerbin - Tianjin 2020-07-01 09:00:00 2020-07-01 17:00:00
-Beijing - Shanghai  2020-07-01 19:00:00 2020-07-02 7:00:00
-Xian - Guangzhou 2020-07-01 12:00:00 2020-07-01 23:00:00
-Nanjing - Changsha 2020-07-01 22:00:00 2020-07-02 12:00:00
-Chengdu - Nanjing 2020-07-02 09:00:00 2020-07-01 11:00:00
-Xian - Beijing 2020-07-01 12:00:00 2020-07-02 22:00:00
-Wuhan - Changsha 2020-07-01 09:00:00 2020-07-02 17:00:00
-Nanjing - Guangzhou 2020-07-01 19:00:00 2020-07-01 23:00:00
-Guangzhou - Haerbin 2020-07-01 22:00:00 2020-07-02 20:00:00
-Beijing - Chengdu 2020-07-01 12:00:00 2020-07-02 22:00:00
+Beijing Guangzhou 08:00 20:00
+Beijing Zhengzhou 9:00 8:00
+Beijing Chengdu 09:00 16:00
+Beijing Haerbin 10:00 8:00
+Beijing Shanghai 11:00 16:00
+Haerbin Beijing 12:00 8:00
+Zhengzhou Xian 8:00 4:00
+Zhengzhou Nanjing 14:00 4:00
+Zhengzhou Beijing 9:00 8:00
+Zhengzhou Wuhan 14:00 4:00
+Wuhan Changsha 16:00 4:00
+Wuhan Zhengzhou 17:00 4:00
+Changsha Wuhan 15:00 4:00
+Changsha Guangzhou 13:00 6:00
+Nanjing Shanghai 10:00 4:00
+Nanjing Hangzhou 11:00 4:00
+Nanjing Zhengzhou 10:00 4:00
+Guangzhou Beijing 08:00 20:00
+Guangzhou Shanghai 09:00 10:00
+Guangzhou Xian 19:00 12:00
+Guangzhou Changsha 13:00 6:00
+Shanghai Hangzhou 14:00 2:00
+Shanghai  Beijing 18:00 14:00
+Shanghai Nanjing 9:00 4:00
+Shanghai Zhengzhou 10:00 8:00
+Hangzhou Shanghai 10:00 2:00
+Chengdu Xian 19:00 4:00
+Chengdu Zhengzhou 10:00 8:00
+Xian Zhengzhou 8:00 4:00
+Xian Chengdu 5:00 4:00
