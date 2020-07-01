@@ -1,7 +1,8 @@
-Beijing Guangzhou 2020-07-01 08:00:00 2020-07-01 12:00:00
-Tianjin Haerbin 2020-07-02 09:00:00 2020-07-02 11:00:00
-Shanghai Beijing 2020-07-01 19:00:00 2020-07-01 22:00:00
-Wuhan Guangzhou 2020-07-03 07:00:00 2020-07-04 09:00:00
-Xianggang Chengdu 2020-07-01 19:00:00 2020-07-01 22:00:00
-Xian Changsha 2020-07-02 09:00:00 2020-07-02 11:00:00
-Nanjing Guangzhou 2020-07-01 07:00:00 2020-07-04 09:00:00
+Beijing Guangzhou 08:00 4:00
+Beijing Shanghai 11:00 3:00
+Beijing Zhengzhou 12:00 2:00
+Guangzhou Beijing 08:00 4:00
+Guangzhou Shanghai 09:00 3:00
+Guangzhou Chengdu 10:00 3:00
+Shanghai Guangzhou 14:00 3:00
+Shanghai  Beijing 18:00 3:00

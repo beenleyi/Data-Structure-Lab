@@ -1,58 +1,65 @@
 #include<iostream>
 using namespace std;
-#include <string>
+const int CITY_NUM = 20;
+const int INF= 100000000;
+const int YEAR = 2020;
+#include<iomanip>
+#include<string>
 #include<vector>
-const int TOTAL_CITY_NUM = 10;
-struct time
-{
-    int year;
-    int month;
-    int day;
-    int hour;
-    int minute;
+#include<fstream>
+#include<time.h>
+#include<windows.h>
+const double city_risk_no2value[3]={0.9, 0.5, 0.2};
+const int vehicle_risk_no2value[3]={9, 5, 2};
+const int total_city = 11;
+
+struct my_time{
+  int year;
+  int month;
+  int day;
+  int hour;
+  int minute;
+};
+
+struct my_clock{
+  int hour;
+  int minute;
 };
 
 struct vehicle{
     int type;
-    string dst_city;
-    time start_time;
-    time end_time;
+    int dst_city_no;
+    my_clock start_time;
+    my_clock time_spent;
 };
 
 struct city{
-    int city_risk;//城市风险编号
+    int city_risk_no;//城市风险编号
     string city_name;
     vector < vehicle >  my_vehicle;
 };
 
-struct input{
-  int src_city_no;//source address 
+struct request{
+  int dept_city_no;//source address 
   int dst_city_no;//destination address
-  int travel_type;//0:least risk type;1:least risk type in limited time
+  int travel_type;//0:least risk type; 1:least risk type in limited time
+  int limited_time;//hour
 };
 
 struct route{
-    int wait_time;//wait for the vehicle at addr;
+    int wait_time;//wait for the vehicle at city_no, hour
+    my_time arrival_time;
     int city_no;
     int vehicle;//use what vehicle to next addr;
     int vehicle_time;//spend how much time to next addr;
 //    int wait_risk;//wait for the vehicle with how much risk;
-    int next_ptr;
+    route * next_ptr;
 };
 typedef route * route_ptr;
 
 struct route_info
 {
-	int total_risk;
+	double total_risk;
 	int total_time;
 	route_ptr detail_route;
-};
-typedef route_info* route_info_ptr;
-
-struct output{
-    time start_time;
-    time end_time;
-    int src_city_no;
-    int dst_city_no;
-    route_info_ptr best_route;
 };
