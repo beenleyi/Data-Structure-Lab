@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-07-01T10:43:13
+# Project created by QtCreator 2020-07-02T11:44:55
 #
 #-------------------------------------------------
 
@@ -25,10 +25,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    find_route.cpp \
+    init.cpp \
+    time.cpp \
+    write_log.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    struct.h \
+    struct.h
 
 FORMS += \
         mainwindow.ui
+
+RESOURCES += \
+    my_rsc.qrc
+
+
+RC_ICONS =iTravel.ico
+
+RC_FILE += proj.rc

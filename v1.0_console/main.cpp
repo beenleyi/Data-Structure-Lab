@@ -1,7 +1,7 @@
 #include"struct.h"
 city cities[CITY_NUM];
 extern void log_input(const request &);
-void log_output(const route_info &, int);
+extern void log_output(const route_info &, int);
 extern simulation(const route_info &, int);
 extern void find_route(const request &, route_info &);
 extern void input(request &);
