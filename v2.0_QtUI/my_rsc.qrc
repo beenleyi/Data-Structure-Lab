@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/new/img">
+        <file>resource/car.png</file>
+        <file>resource/destination.png</file>
+        <file>resource/map.png</file>
+        <file>resource/plane.png</file>
+        <file>resource/start.png</file>
+        <file>resource/train.png</file>
+        <file>resource/waiting.png</file>
+        <file>resource/finish.png</file>
+        <file>resource/iTravel.png</file>
+    </qresource>
+    <qresource prefix="/new/data">
+        <file>resource/car.data</file>
+        <file>resource/city.data</file>
+        <file>resource/plane.data</file>
+        <file>resource/train.data</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

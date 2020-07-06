@@ -23,6 +23,10 @@ void log_output(const route_info & best_route, int dst_city_no){
 	route_ptr i;
 	log<<"The best route is\n";
 	i = best_route.detail_route->next_ptr;
+	if (i == NULL) {
+		log<<"****ERROR****\n Can NOT find one route which meet your require!";
+		return;
+	}
 	while(i){
 		log << cities[i->city_no].city_name<<"--->";
 		if (i->next_ptr) log << cities[i->next_ptr->city_no].city_name; else log <<  cities[dst_city_no].city_name;
@@ -39,5 +43,7 @@ void log_output(const route_info & best_route, int dst_city_no){
 		log << temp_time.year<<"-"<<temp_time.month<<"-"<<temp_time.day<<" "<<setw(2)<<setfill('0')<<temp_time.hour<<":"<<temp_time.minute << endl;
 		i=i->next_ptr;
 	}
+	log<<"The total time is "<<best_route.total_time;
+	log<<"The total risk is "<<best_route.total_risk;
 	log.close();
 }
